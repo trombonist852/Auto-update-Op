@@ -40,7 +40,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [Lede_source]
+        target: [X86,k3,r2s,r4s,pi3,pi4,openwrt_amlogic]
         
         # [Lede_source,Lienol_source,Mortal_source,Tianling_source,openwrt_amlogic]
 
