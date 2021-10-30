@@ -2,9 +2,9 @@
 
 - # 择要
 ---
-- 2021/10/23号更新
+- 2021/10/29号更新
 - 《[全新启动编译教程（必须获取密匙后才可以）](https://github.com/danshui-git/shuoming/blob/master/config.md)》
-- 《[全新一键保存配置同步上游仓库和清理仓库说明](https://github.com/danshui-git/shuoming/blob/master/chongxinfork.md)》
+- 《[全新一键保存配置同步上游仓库说明](https://github.com/danshui-git/shuoming/blob/master/chongxinfork.md)》
 - 新手教程全新整理了一下，应该更容易看懂了
 ---
 - # 介绍
@@ -62,7 +62,7 @@ op自带的ttyd或者用putty连接OP都可以，用了命令后会一直使用�
 - > 12、
 - 《[仓库密匙获取跟使用](https://github.com/danshui-git/shuoming/blob/master/jm.md)》
 - 《[增加编译机型文件夹的方法](https://github.com/danshui-git/shuoming/blob/master/jlck.md)》
-- 《[定时触发编译说明](https://github.com/danshui-git/shuoming/blob/master/%E5%AE%9A%E6%97%B6%E7%BC%96%E8%AF%91%E8%AF%B4%E6%98%8E.md)》
+- 《[定时触发开启编译说明](https://github.com/danshui-git/shuoming/blob/master/%E5%AE%9A%E6%97%B6%E7%BC%96%E8%AF%91%E8%AF%B4%E6%98%8E.md)》
 - 《[一键保存配置同步上游仓库启动说明](https://github.com/danshui-git/shuoming/blob/master/chongxinfork.md)》
 - 《[IPV4/IPV6选择](https://github.com/danshui-git/shuoming/blob/master/%E5%85%B6%E4%BB%96%E8%AF%B4%E6%98%8E.md)》
 - 《[banner的说明](https://github.com/danshui-git/shuoming/blob/master/banner%E8%AF%B4%E6%98%8E.md)》
@@ -76,22 +76,24 @@ op自带的ttyd或者用putty连接OP都可以，用了命令后会一直使用�
 - 《[修改文件跟删除仓库](https://github.com/danshui-git/shuoming/blob/master/%E5%88%A0%E9%99%A4%E5%92%8C%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6.md)》
 
 #
+#
+- # 捐赠
+- 如果你觉得此项目对你有帮助，请请我喝一杯82年的凉白开，感谢！
 
+-微信-
+# <img src="https://github.com/danshui-git/shuoming/blob/master/doc/weixin4.png" />
 #
 #
-- ## 鸣谢
-- [coolsnowwolf](https://github.com/coolsnowwolf/lede.git)
-- [Lienol](https://github.com/Lienol/openwrt.git)
-- [ctcgfw](https://github.com/project-openwrt/openwrt.git)
-- [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)
-- [tuanqing](https://github.com/tuanqing/mknop)
-- [Hyy2001X](https://github.com/Hyy2001X/AutoBuild-Actions)
-- [ophub](https://github.com/ophub/amlogic-s9xxx-openwrt)
-- [nicholas-opensource](https://github.com/nicholas-opensource/OpenWrt-Autobuild)
-- [hx210](https://github.com/hx210/build-actions)
-- <a href="#/README.md">hyird</a>
-- <a href="#/README.md">World Peace</a>
-- [github平台](https://github.com/)
-- <a href="#/README.md">感谢各位大佬提供的各种各样的插件</a>
-- <a href="#/README.md">感谢各位帮助过我的人，祝福各位好人一生平安</a>
-
+- # 鸣谢
+> [`coolsnowwolf`](https://github.com/coolsnowwolf/lede.git)
+> [`Lienol`](https://github.com/Lienol/openwrt.git)
+> [`ctcgfw`](https://github.com/project-openwrt/openwrt.git)
+> [`P3TERX`](https://github.com/P3TERX/Actions-OpenWrt)
+> [`tuanqing`](https://github.com/tuanqing/mknop)
+> [`Hyy2001X`](https://github.com/Hyy2001X/AutoBuild-Actions)
+> [`ophub`](https://github.com/ophub/amlogic-s9xxx-openwrt)
+> [`nicholas-opensource`](https://github.com/nicholas-opensource/OpenWrt-Autobuild)
+> [`hx210`](#/README.md)
+> [`hyird`](#/README.md)
+> [`World Peace`](#/README.md)
+> [`感谢各位大佬提供的各种各样的插件`](#/README.md)
