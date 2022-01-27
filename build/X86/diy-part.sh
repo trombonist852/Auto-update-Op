@@ -14,7 +14,7 @@
 sed -i 's/ImmortalWrt/Trb.Corp/g' package/base-files/files/bin/config_generate
 
 #Modify Default Network Interface
-sed -i '/ucidef_set_interface_lan/s/eth0/eth1 eth2 eth3 eth4 eth5/g' package/base-files/files/etc/board.d/99-default_network
+sed -i '/ucidef_set_interface_lan/s/eth0/eth1 eth2 eth3/g' package/base-files/files/etc/board.d/99-default_network
 sed -i '/ucidef_set_interface_wan/s/eth1/eth0/g' package/base-files/files/etc/board.d/99-default_network
 
 
@@ -25,9 +25,12 @@ sed -i 's#root::0:0:99999:7:::#root:$1$fe9OTETj$lEJwiQW4hDxi/GNj4JUlC1:18679:0:9
 #Add Package
 
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/custom/autotimeset
-git clone https://github.com/godros/luci-app-godproxy.git package/custom/luci-app-godproxy
-git clone https://github.com/linkease/nas-packages.git package/custom/nas-packages
+git clone https://github.com/1wrt/luci-app-ikoolproxy package/custom/luci-app-ikoolproxy
 svn checkout https://github.com/trombonist852/custom/trunk/luci-app-filetransfer package/custom/luci-app-filetransfer-mod
+svn co https://github.com/linkease/nas-packages/trunk/network/services/ddnsto package/custom/ddnsto
+svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease package/custom/linkease
+svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto package/custom/luci-app-ddnsto
+snv co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease package/custom/luci-app-linkease
 
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile           # 选择argon为默认主题
 
