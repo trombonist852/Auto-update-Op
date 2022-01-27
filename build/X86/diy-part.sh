@@ -30,7 +30,7 @@ svn checkout https://github.com/trombonist852/custom/trunk/luci-app-filetransfer
 svn co https://github.com/linkease/nas-packages/trunk/network/services/ddnsto package/custom/ddnsto
 svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease package/custom/linkease
 svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto package/custom/luci-app-ddnsto
-snv co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease package/custom/luci-app-linkease
+svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease package/custom/luci-app-linkease
 
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile           # 选择argon为默认主题
 
