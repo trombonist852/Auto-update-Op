@@ -1,0 +1,19 @@
+
+config samba
+	option workgroup 'WORKGROUP'
+	option charset 'UTF-8'
+	option description 'Share'
+	option enable_extra_tuning '1'
+	option disable_netbios '1'
+	option interface 'lan wan'
+	option allow_legacy_protocols '1'
+
+config sambashare
+	option name 'sda1'
+	option path '/mnt/sda1'
+	option read_only 'no'
+	option force_root '1'
+	option users 'root'
+	option guest_ok 'no'
+	option create_mask '0777'
+	option dir_mask '0777'
