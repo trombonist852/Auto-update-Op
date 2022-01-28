@@ -12,7 +12,7 @@ sed -i 's#root::0:0:99999:7:::#root:$1$fe9OTETj$lEJwiQW4hDxi/GNj4JUlC1:18679:0:9
 
 
 #rm -rf feeds/luci/applications/luci-app-passwall
-
+rm -rf package/firmware/brcmfmac4366c0-firmware-vendor/files/brcmfmac4366c-pcie.bin
 #Add Package
 #svn co https://github.com/trombonist852/custom/trunk/luci-app-passwall feeds/luci/applications/luci-app-passwall
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/custom/autotimeset
