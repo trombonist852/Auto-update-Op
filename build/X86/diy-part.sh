@@ -21,10 +21,10 @@ sed -i '/ucidef_set_interface_wan/s/eth1/eth0/g' package/base-files/files/etc/bo
 #Modify Default Password
 sed -i 's#root::0:0:99999:7:::#root:$1$fe9OTETj$lEJwiQW4hDxi/GNj4JUlC1:18679:0:99999:7:::#g' package/base-files/files/etc/shadow
 
-rm -rf feeds/luci/applications/luci-app-passwall
+#rm -rf feeds/luci/applications/luci-app-passwall
 
 #Add Package
-svn co https://github.com/trombonist852/custom/trunk/luci-app-passwall feeds/luci/applications/luci-app-passwall
+#svn co https://github.com/trombonist852/custom/trunk/luci-app-passwall feeds/luci/applications/luci-app-passwall
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/custom/autotimeset
 git clone https://github.com/1wrt/luci-app-ikoolproxy package/custom/luci-app-ikoolproxy
 svn checkout https://github.com/trombonist852/custom/trunk/luci-app-filetransfer package/custom/luci-app-filetransfer-mod
