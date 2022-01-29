@@ -12,8 +12,13 @@ sed -i 's#root::0:0:99999:7:::#root:$1$fe9OTETj$lEJwiQW4hDxi/GNj4JUlC1:18679:0:9
 
 
 #rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-k3screenctrl
+rm -rf feeds/packages/utils/phicomm-k3screenctrl
 rm -rf package/firmware/brcmfmac4366c0-firmware-vendor/files/brcmfmac4366c-pcie.bin
 #Add Package
+git clone https://github.com/lwz322/k3screenctrl.git package/custom/k3screenctrl
+git clone https://github.com/lwz322/luci-app-k3screenctrl.git package/custom/luci-app-k3screenctrl
+git clone https://github.com/lwz322/k3screenctrl_build.git package/custom/k3screenctrl_build
 #svn co https://github.com/trombonist852/custom/trunk/luci-app-passwall feeds/luci/applications/luci-app-passwall
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/custom/autotimeset
 git clone https://github.com/1wrt/luci-app-ikoolproxy package/custom/luci-app-ikoolproxy
