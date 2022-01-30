@@ -28,6 +28,8 @@ svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease 
 svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto package/custom/luci-app-ddnsto
 svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease package/custom/luci-app-linkease
 svn export https://github.com/xiangfeidexiaohuo/Phicomm-K3_Wireless-Firmware/trunk/brcmfmac4366c-pcie.bin_69027 package/firmware/brcmfmac4366c0-firmware-vendor/files/brcmfmac4366c-pcie.bin
+svn export https://github.com/ZhangCharlie/k3screen-fix-patch/trunk/bcm53xx/patches-5.4/906-BCM5301x-uart1.patch target/linux/bcm53xx/patches-5.4/906-BCM5301x-uart1.patch
+svn export https://github.com/ZhangCharlie/k3screen-fix-patch/trunk/k3screen/000-k3screen.patch package/custom/k3screenctrl_build/patches/000-k3screen.patch
 
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile           # 选择argon为默认主题
 
