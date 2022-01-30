@@ -17,7 +17,7 @@ rm -rf feeds/packages/utils/phicomm-k3screenctrl
 rm -rf package/firmware/brcmfmac4366c0-firmware-vendor/files/brcmfmac4366c-pcie.bin
 #Add Package
 git clone https://github.com/lwz322/k3screenctrl.git package/custom/k3screenctrl
-git clone https://github.com/lwz322/luci-app-k3screenctrl.git package/custom/luci-app-k3screenctrl
+git clone https://github.com/Hill-98/luci-app-k3screenctrl.git package/custom/luci-app-k3screenctrl
 git clone https://github.com/lwz322/k3screenctrl_build.git package/custom/k3screenctrl_build
 #svn co https://github.com/trombonist852/custom/trunk/luci-app-passwall feeds/luci/applications/luci-app-passwall
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/custom/autotimeset
