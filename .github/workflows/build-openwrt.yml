@@ -17,7 +17,6 @@
 
 name: 触发compile启动编译
 on:
-  repository_dispatch:
   workflow_dispatch:
     inputs:
       ssh:
@@ -51,7 +50,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     name: 启动${{matrix.target}}编译
