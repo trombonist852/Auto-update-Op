@@ -28,6 +28,7 @@ sed -i 's#root::0:0:99999:7:::#root:$1$fe9OTETj$lEJwiQW4hDxi/GNj4JUlC1:18679:0:9
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/custom/autotimeset
 git clone https://github.com/1wrt/luci-app-ikoolproxy package/custom/luci-app-ikoolproxy
 svn checkout https://github.com/trombonist852/custom/trunk/luci-app-filetransfer package/custom/luci-app-filetransfer-mod
+svn export https://github.com/kiddin9/my-packages/trunk/my-default-settings/files/sysinfo.sh package/emortal/default-settings/files/
 svn co https://github.com/linkease/nas-packages/trunk/network/services/ddnsto package/custom/ddnsto
 svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease package/custom/linkease
 svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto package/custom/luci-app-ddnsto
