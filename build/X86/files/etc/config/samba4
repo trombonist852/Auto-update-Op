@@ -8,7 +8,7 @@ config samba
 	option allow_legacy_protocols '1'
 
 config sambashare
-	option name 'sda1'
+	option name '文件'
 	option path '/mnt/sda1'
 	option read_only 'no'
 	option users 'root'
