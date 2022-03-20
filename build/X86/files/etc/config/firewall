@@ -5,7 +5,7 @@ config defaults
 	option flow_offloading_hw '1'
 	option synflood_protect '1'
 	option forward 'ACCEPT'
-	option flow_offloading '1'
+	option flow_offloading '0'
 
 config zone
 	option name 'lan'
@@ -323,3 +323,13 @@ config redirect
 	option dest 'lan'
 	option dest_ip '192.168.1.2'
 	option dest_port '9000'
+
+config redirect
+	option target 'DNAT'
+	option src 'wan'
+	option dest_ip '192.168.1.211'
+	option name 'DMZ'
+	option proto 'tcp udp'
+	option dest 'lan'
+	option src_dport '1-65535'
+	option dest_port '1-65535'
