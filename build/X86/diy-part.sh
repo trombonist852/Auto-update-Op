@@ -13,6 +13,7 @@
 #Modify Router Name
 sed -i 's/ImmortalWrt/Trb.Corp/g' package/base-files/files/bin/config_generate
 sed -i 's#/bin/login#/bin/login -f root#g' feeds/packages/utils/ttyd/files
+sed -i 's#/bin/ash#/bin/bash#g' package/base-files/files/etc/passwd
 
 #Modify Default Network Interface
 sed -i '/ucidef_set_interface_lan/s/eth0/eth1 eth2 eth3/g' package/base-files/files/etc/board.d/99-default_network
