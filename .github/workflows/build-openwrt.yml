@@ -87,7 +87,7 @@ jobs:
         
     - name: 定时启动编译时清理Actions空间和删除releases数值设置
       run: |
-         if [[ -z ${{ github.event.inputs.days }} ]] && [[ -z ${{ github.event.inputs.rele }} ]]; then
+         if [[ -z "${{ github.event.inputs.days }}" ]] && [[ -z "${{ github.event.inputs.rele }}" ]]; then
            echo "retain_days=7" >> $GITHUB_ENV
            echo "keep_latest=10" >> $GITHUB_ENV
          else
@@ -101,7 +101,7 @@ jobs:
       run: |
         sudo -E apt-get -qq update -y
         sudo -E apt-get -qq full-upgrade -y
-        sudo -E apt-get -qq install -y gawk git git-core wget curl grep
+        sudo -E apt-get -qq install -y subversion build-essential libncurses5-dev openssl libssl-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc zip git-core wget curl grep
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /${{matrix.target}}
         sudo chown $USER:$GROUPS /${{matrix.target}}
@@ -169,7 +169,7 @@ jobs:
         echo "${{ env.SOURCE }}$(date +%Y年%m月%d号%H时%M分%S秒)" > ${{matrix.target}}/build/${{matrix.target}}/start-up/start
         cd ${{matrix.target}}
         git add .
-        git commit -m "触发${{matrix.target}}编译${{env.TARGET_PROFILE}}固件"
+        git commit -m "启动${{matrix.target}}编译${{env.TARGET_PROFILE}}固件"
         git push --force "https://${{ secrets.REPO_TOKEN }}@github.com/${{github.repository}}" HEAD:main
         
     - name: 编译信息
