@@ -1,0 +1,38 @@
+
+config samba
+	option workgroup 'WORKGROUP'
+	option charset 'UTF-8'
+	option enable_extra_tuning '1'
+	option macos '1'
+	option allow_legacy_protocols '1'
+	option description 'Samba on Nas'
+
+config sambashare
+	option read_only 'no'
+	option users 'root'
+	option create_mask '0777'
+	option dir_mask '0777'
+	option name '16t'
+	option guest_ok 'no'
+	option path '/mnt/sda1'
+
+config sambashare
+	option path '/mnt/sdb1'
+	option read_only 'no'
+	option dir_mask '0777'
+	option users 'root'
+	option guest_ok 'no'
+	option create_mask '0777'
+	option name '4T'
+	option timemachine '1'
+	option timemachine_maxsize '2048'
+
+config sambashare
+	option name 'SSD'
+	option path '/mnt/nvme0n1p1'
+	option read_only 'no'
+	option users 'root'
+	option guest_ok 'no'
+	option create_mask '0777'
+	option dir_mask '0777'
+
