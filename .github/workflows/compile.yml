@@ -16,7 +16,7 @@ on:
     branches:
       - main
     paths:
-      - 'config'
+      - 'build/X86-nas/start-up/start'
 
 env:
   Github: https://github.com/${{github.repository}}
