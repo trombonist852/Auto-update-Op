@@ -26,6 +26,8 @@ sed -i 's#root::0:0:99999:7:::#root:$1$fe9OTETj$lEJwiQW4hDxi/GNj4JUlC1:18679:0:9
 #Change kernel
 #sed -i 's/PATCHVER:=5.10/PATCHVER:=5.4/g' target/linux/x86/Makefile
 
+# 更改使用OpenClash的分支代码，把下面的master改成dev就使用dev分支，改master就是用master分支，改错的话就默认使用master分支
+echo "OpenClash_branch" > master
 
 #Add Package
 git clone https://github.com/sirpdboy/luci-app-autotimeset.git package/custom/autotimeset
