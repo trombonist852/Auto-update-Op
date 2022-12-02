@@ -1,3 +1,4 @@
+
 config defaults
 	option input 'ACCEPT'
 	option output 'ACCEPT'
@@ -18,7 +19,6 @@ config zone
 	option name 'wan'
 	option output 'ACCEPT'
 	option masq '1'
-	option mtu_fix '1'
 	option input 'ACCEPT'
 	option forward 'ACCEPT'
 	list network 'wan'
@@ -130,7 +130,7 @@ config rule
 	option proto 'udp'
 	option family 'ipv4'
 	option target 'REJECT'
-	option enabled 'false'
+	option enabled '0'
 
 config include
 	option path '/etc/firewall.user'
@@ -241,22 +241,77 @@ config redirect
 	option dest_port '6800'
 	option dest_ip '192.168.1.2'
 
+config include 'koolproxy'
+	option type 'script'
+	option path '/var/etc/koolproxy.include'
+	option reload '1'
+
+config include 'vssr'
+	option type 'script'
+	option path '/var/etc/vssr.include'
+	option reload '1'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option src 'wan'
+	option dest_ip '192.168.1.2'
+	list proto 'tcp'
+	list proto 'udp'
+	option name 'Rabbit'
+	option dest_port '5711'
+	option src_dport '241'
+
+config redirect
+	option target 'DNAT'
+	option src 'wan'
+	option dest 'lan'
+	option dest_ip '192.168.1.2'
+	option src_dport '9000'
+	option dest_port '9000'
+	option name 'portainer'
+
+config redirect
+	option target 'DNAT'
+	option name 'Qbit'
+	option src 'wan'
+	option dest 'lan'
+	option dest_ip '192.168.1.2'
+	option dest_port '6881'
+	option src_dport '6881'
+
+config redirect
+	option target 'DNAT'
+	option name 'Ttyd'
+	option src 'wan'
+	option src_dport '243'
+	option dest 'lan'
+	option dest_ip '192.168.1.2'
+	option dest_port '22'
+
+config redirect
+	option target 'DNAT'
+	option src 'wan'
+	option dest 'lan'
+	option dest_ip '192.168.1.2'
+	option name 'qbit'
+	option src_dport '6888'
+	option dest_port '6888'
+
+config redirect
+	option target 'DNAT'
+	option src 'wan'
+	option dest_ip '192.168.1.211'
+	option name 'DMZ'
+	option proto 'tcp udp'
+	option dest 'lan'
+	option src_dport '1-65535'
+	option dest_port '1-65535'
+
 config include 'miniupnpd'
 	option type 'script'
 	option path '/usr/share/miniupnpd/firewall.include'
 	option family 'any'
-	option reload '1'
-
-config rule 'linkease'
-	option name 'linkease'
-	option target 'ACCEPT'
-	option src 'wan'
-	option proto 'tcp'
-	option dest_port '8897'
-
-config include 'koolproxy'
-	option type 'script'
-	option path '/var/etc/koolproxy.include'
 	option reload '1'
 
 config include 'openclash'
@@ -274,62 +329,7 @@ config include 'passwall_server'
 	option path '/var/etc/passwall_server.include'
 	option reload '1'
 
-config include 'vssr'
-	option type 'script'
-	option path '/var/etc/vssr.include'
-	option reload '1'
-
-config redirect
-	option target 'DNAT'
-	option name 'Qbit'
+config forwarding
 	option src 'wan'
-	option src_dport '241'
 	option dest 'lan'
-	option dest_ip '192.168.1.2'
-	option dest_port '28080'
 
-config redirect
-	option target 'DNAT'
-	option name 'Qbit'
-	option src 'wan'
-	option src_dport '242'
-	option dest 'lan'
-	option dest_ip '192.168.1.2'
-	option dest_port '6881'
-
-config redirect
-	option target 'DNAT'
-	option name 'Ttyd'
-	option src 'wan'
-	option src_dport '243'
-	option dest 'lan'
-	option dest_ip '192.168.1.2'
-	option dest_port '22'
-
-config redirect
-	option target 'DNAT'
-	option src 'wan'
-	option src_dport '26888'
-	option dest 'lan'
-	option dest_ip '192.168.1.2'
-	option dest_port '26888'
-	option name 'qbit'
-
-config redirect
-	option target 'DNAT'
-	option name 'qbit'
-	option src 'wan'
-	option src_dport '9000'
-	option dest 'lan'
-	option dest_ip '192.168.1.2'
-	option dest_port '9000'
-
-config redirect
-	option target 'DNAT'
-	option src 'wan'
-	option dest_ip '192.168.1.211'
-	option name 'DMZ'
-	option proto 'tcp udp'
-	option dest 'lan'
-	option src_dport '1-65535'
-	option dest_port '1-65535'
