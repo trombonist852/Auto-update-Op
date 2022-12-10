@@ -225,31 +225,12 @@ config redirect
 
 config redirect
 	option target 'DNAT'
-	option name 'nas-aria2-3'
-	option src 'wan'
-	option src_dport '51413'
-	option dest 'lan'
-	option dest_ip '192.168.1.2'
-	option dest_port '51413'
-
-config redirect
-	option target 'DNAT'
 	option name 'nas-Aria2'
 	option src 'wan'
 	option src_dport '240'
 	option dest 'lan'
 	option dest_port '6800'
 	option dest_ip '192.168.1.2'
-
-config include 'koolproxy'
-	option type 'script'
-	option path '/var/etc/koolproxy.include'
-	option reload '1'
-
-config include 'vssr'
-	option type 'script'
-	option path '/var/etc/vssr.include'
-	option reload '1'
 
 config redirect
 	option dest 'lan'
@@ -261,6 +242,43 @@ config redirect
 	option name 'Rabbit'
 	option dest_port '5711'
 	option src_dport '241'
+
+config redirect
+	option dest 'lan'
+	option target 'DNAT'
+	option name 'SillyGirl'
+	option src 'wan'
+	option dest_ip '192.168.1.2'
+	option dest_port '8700'
+	option src_dport '242'
+
+config redirect
+	option target 'DNAT'
+	option name 'Ttyd'
+	option src 'wan'
+	option src_dport '243'
+	option dest 'lan'
+	option dest_ip '192.168.1.2'
+	option dest_port '22'
+
+config redirect
+	option target 'DNAT'
+	option name 'nas-aria2-3'
+	option src 'wan'
+	option src_dport '51413'
+	option dest 'lan'
+	option dest_ip '192.168.1.2'
+	option dest_port '51413'
+
+config include 'koolproxy'
+	option type 'script'
+	option path '/var/etc/koolproxy.include'
+	option reload '1'
+
+config include 'vssr'
+	option type 'script'
+	option path '/var/etc/vssr.include'
+	option reload '1'
 
 config redirect
 	option target 'DNAT'
@@ -279,15 +297,6 @@ config redirect
 	option dest_ip '192.168.1.2'
 	option dest_port '6881'
 	option src_dport '6881'
-
-config redirect
-	option target 'DNAT'
-	option name 'Ttyd'
-	option src 'wan'
-	option src_dport '243'
-	option dest 'lan'
-	option dest_ip '192.168.1.2'
-	option dest_port '22'
 
 config redirect
 	option target 'DNAT'
@@ -332,4 +341,3 @@ config include 'passwall_server'
 config forwarding
 	option src 'wan'
 	option dest 'lan'
-
