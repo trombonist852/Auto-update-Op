@@ -74,6 +74,7 @@ sed -i '/ucidef_set_interface_wan/s/eth1/eth0/g' package/base-files/files/etc/bo
 svn checkout https://github.com/trombonist852/custom/trunk/luci-app-filetransfer package/custom/luci-app-filetransfer-mod
 #svn export https://github.com/trombonist852/custom/trunk/sysinfo.sh package/emortal/default-settings/files/
 
+sed -i 's#/bin/login#/bin/login -f root#g' feeds/packages/utils/ttyd/files/ttyd.config
 
 # 晶晨CPU系列打包固件设置(不懂请看说明)
 export amlogic_model="s905d"
